@@ -1,0 +1,145 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #fff0f6;
+  color: #444;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff99c8, #ffb6d9);
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffe4f1;
+}
+
+.btn {
+  background: #ff85c1;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 3px 8px rgba(255, 105, 180, 0.4);
+}
+
+.btn:hover {
+  background: #ff4da6;
+  transform: scale(1.08);
+}
+
+/* Grid layout */
+.grid-layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.grid-header {
+  grid-area: header;
+  background: #ffb3d9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.grid-sidebar {
+  grid-area: sidebar;
+  background: #ffd6eb;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.grid-main {
+  grid-area: main;
+  background: #ffe6f2;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.grid-footer {
+  grid-area: footer;
+  background: #ff99cc;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* --- Gallery Styles --- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  grid-template-rows: repeat(3, 1fr);   /* 3 строки */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  aspect-ratio: 1 / 1; /* делает квадраты */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* аккуратно обрезает под квадрат */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Caption overlay */
+.gallery-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 133, 193, 0.8);
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  padding: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 10px 10px;
+}
+
+.gallery-item:hover .caption {
+  opacity: 1;
+}

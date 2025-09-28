@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #ffe4ec, #fff5f9);
+  background: linear-gradient( #ffe4ec, #fff5f9);
   color: #333;
   line-height: 1.6;
 }
@@ -55,14 +55,6 @@ p {
   display: block;
 }
 
-.small-bow {
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  width: 80px;
-  pointer-events: none;
-}
-
 ol {
   padding-left: 20px;
   margin-bottom: 20px;
@@ -86,7 +78,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.btn {
+.my-button {
   display: inline-block;
   padding: 10px 20px;
   background: #ff4081;
@@ -96,7 +88,7 @@ a:hover {
   font-weight: bold;
   transition: background 0.3s, transform 0.2s;
 }
-.btn:hover {
+.my-button:hover {
   background: #d81b60;
   transform: scale(1.05);
 }
